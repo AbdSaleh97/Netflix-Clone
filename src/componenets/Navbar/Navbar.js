@@ -2,7 +2,7 @@ function NavBar()
 {
     return(
         <>
-        <h1>Hello from nav bar component</h1>
+        <h1>Hello from navbar component</h1>
         </>
     )
 }
