@@ -5,9 +5,8 @@ import Header from '../Header/Header.js';
 
 function Home() {
   const [jsonData, setJsonData] = useState([]);
-  const PORT = process.env.REACT_APP_PORT || 300;
   const req = async () => {
-    let url = `http://localhost:${PORT}/trending`
+    let url = `https://movies-1zql.onrender.com/trending`
     const res = await fetch(url);
     const jsonRes = await res.json();
     setJsonData(jsonRes);
@@ -22,7 +21,6 @@ function Home() {
     <>
       <Header />
       <MovieList data={jsonData} />
-      {/* <h1> hello</h1> */}
     </>
   );
 }

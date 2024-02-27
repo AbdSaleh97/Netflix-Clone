@@ -1,14 +1,12 @@
-// import ModalMovie from '../modalMovies/ModalMovie.js'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import ModalMovie from '../modalMovies/ModalMovie';
 
-
 function Movie(props) {
   const [modalShow, setModalShow] = useState(false)
-const {data} = props;
+  const { data } = props;
   const renderModalMovie = () => {
     setModalShow(true);
   }
@@ -22,9 +20,10 @@ const {data} = props;
             <Card.Title>Title: {data.title}</Card.Title>
             <Card.Text>Overview: {data.overview}</Card.Text>
             <Button variant="primary" onClick={renderModalMovie}>Add to Fav</Button>
-            <ModalMovie show={modalShow} onHide={() => setModalShow(false)} data={data} />;
           </Card.Body>
+          
         </Card>
+        <ModalMovie show={modalShow} onHide={() => setModalShow(false)} data={data} />;
       </Col>
     </>
   )

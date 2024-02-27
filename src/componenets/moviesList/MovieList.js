@@ -10,7 +10,6 @@ function MovieList(props) {
         <Movie data={el} />
       ))}
     </Row>
-      
     </>
   );
 }

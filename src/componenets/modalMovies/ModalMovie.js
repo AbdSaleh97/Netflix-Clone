@@ -20,10 +20,7 @@ function ModalMovie(props) {
             "poster_path": data.path,
             "comments": comment
         };
-        // i ahve a propblem with the port number it causes some problem when i start the lab12 and lab13 server with each other
-        // so i used the online version of the server and used it and it works fine
-        //here is my local link if needed =>  http://localhost:3002/addMovies
-        fetch('https://movies-be-server.onrender.com/addMovie', {
+        fetch('https://movies-1zql.onrender.com/addFavMovie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,20 +34,13 @@ function ModalMovie(props) {
                 return response.json();
             })
             .then(data => {
-                // Handle the successful response if needed
-                // console.log('Response:', data);
+                console.log('Response:', data);
             })
             .catch(error => {
-                // console.error('Error:', error);
+                console.error('Error:', error);
             });
-
         props.onHide();
     };
-
-
-
-
-
     return (
         <Modal
             {...props}
