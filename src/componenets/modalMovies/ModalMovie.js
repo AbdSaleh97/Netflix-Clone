@@ -11,7 +11,6 @@ function ModalMovie(props) {
     const handleCommentChange = (event) => {
         setComment(event.target.value);
     };
-
     const handleButtonClick = () => {
         const postData = {
             "title": data.title,
@@ -37,7 +36,7 @@ function ModalMovie(props) {
                 console.log('Response:', data);
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error:', data);
             });
         props.onHide();
     };

@@ -1,7 +1,7 @@
 import './Home.css';
 import { useEffect, useState } from 'react';
 import MovieList from '../moviesList/MovieList.js';
-import Header from '../Header/Header.js';
+
 
 function Home() {
   const [jsonData, setJsonData] = useState([]);
@@ -19,7 +19,6 @@ function Home() {
 
   return (
     <>
-      <Header />
       <MovieList data={jsonData} />
     </>
   );

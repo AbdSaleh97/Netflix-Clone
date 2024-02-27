@@ -7,7 +7,7 @@ import ModalMovie from '../modalMovies/ModalMovie';
 function Movie(props) {
   const [modalShow, setModalShow] = useState(false)
   const { data } = props;
-  const renderModalMovie = () => {
+  const renderModalMovie =() => {
     setModalShow(true);
   }
   return (
@@ -19,9 +19,8 @@ function Movie(props) {
             <h1>{data.title}</h1>
             <Card.Title>Title: {data.title}</Card.Title>
             <Card.Text>Overview: {data.overview}</Card.Text>
-            <Button variant="primary" onClick={renderModalMovie}>Add to Fav</Button>
+            <Button variant="primary" onClick={() => { renderModalMovie() }}>Add to Fav</Button>
           </Card.Body>
-          
         </Card>
         <ModalMovie show={modalShow} onHide={() => setModalShow(false)} data={data} />;
       </Col>
