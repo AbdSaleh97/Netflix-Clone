@@ -1,8 +1,9 @@
-function NavBar()
-{
-    return(
+import Header from "../Header/Header";
+
+function NavBar() {
+    return (
         <>
-        <h1>Hello from navbar component</h1>
+            <Header />
         </>
     )
 }
