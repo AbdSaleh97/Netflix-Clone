@@ -17,14 +17,10 @@ function FavList() {
     };
     const update = async (item) => {
         const postData = {
-            // "title": item.title,
-            // "overview": item.overview,
-            // "release_date": item.date,
-            // "poster_path": item.path,
             "comments": comments[item.id]
         };
         console.log(item);
-        fetch(`https://movies-1zql.onrender.com/update/${item.id}`/*`http://localhost:3001/update/${item.id}`*/, {
+        fetch(`https://movies-1zql.onrender.com/update/${item.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,7 +85,6 @@ function FavList() {
                     </Col>
                 })}
             </Row>
-            {/* <MemeModal showModal={showModal} handleClose={handleClose} clickedItem={clickedItem} /> */}
         </>
     )
 }
